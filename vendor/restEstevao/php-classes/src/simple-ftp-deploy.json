@@ -1,0 +1,7 @@
+{
+    "host": "SERVIDOR_FTP",
+    "port": 21, 
+    "username": "USER_FTP",
+    "password": "PASSWORD_FTP",
+    "rootDirectory": "/CAMINHO_DO_SERVIDOR/NOME_DO_USUARIO/public_html/vendor/restEstevao/php-classes/src"
+}
