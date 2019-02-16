@@ -1,0 +1,45 @@
+	body { position: relative; }
+
+	#navmain { background-color: #F47B25 !important; }
+	
+	.navbar { padding: 0 1em !important; }
+	.nav-item.active .nav-link{ background-color: #FFF !important; color: rgba(0,0,0,.6) !important; }
+	.nav-link { color: #FFF !important; padding: 13px 1em !important; }
+	.nav-link:hover { background-color: #FFF !important; color: rgba(0,0,0,.6) !important; text-decoration: underline; }
+	
+	#home {
+		background-image: url("assets/images/fundo/bannerpb.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center center;
+		background-size: auto;
+
+		-webkit-background-size:cover;
+		-moz-background-size:cover;
+		-o-background-size:cover;
+
+		padding: 1em 0;
+	}
+	#home img { padding: 6.5em 0; width: 60%; }
+	#home h4{ margin: 0 !important; padding-bottom: .5em; color: rgba(255,255,255,.9); }
+
+	.p-title { padding-top: 15px; }
+
+	#quem { background-color: #FFF; padding: 3.25em 0; }
+
+	#destaques { background-color: #F5F5F5; padding: 3.25em 0; }
+	#destaques .featured { padding-bottom: 15px; }
+	#destaques .featured .nameL { padding-left: 0 !important; }
+	#destaques .featured .nameR { padding-right: 0 !important; }
+
+	#social { background-color: #FFF; padding: 3.25em 0; }
+	#social img { max-width: 370px; }
+
+	#contato { background-color: #F5F5F5; padding: 3.25em 0; }
+	#contato .btn-primary { background-color: #F47B25 !important; border-color: #DB6E21 !important; }
+	
+	#footer { background-color: #F47B25 !important; color: rgba(255,255,255,.9); }
+	#footer h6 { padding: .75em 0; margin: 0 !important;}
+	#footer p { padding-bottom: .25em; margin: 0 !important;}
+	#footer a { color: rgba(255,255,255,.9); }
+	#footer a:hover { color: rgba(0,0,0,.6); }
