@@ -1,0 +1,202 @@
+
+		<!-- HOME section start -->
+		<section id="home" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<img id="logo1" src="res/site/assets/images/logo/Logo.svg" title="Estevão Restaurante e Lanchonete" alt="Estevão Restaurante e Lanchonete" />
+						<h4>Segunda a sexta: 06h às 23h</h4>
+						<h6>(Restaurante e Lanchonete)</h6>
+						<br>
+						<h4>Sábado: 10h às 18h</h4>
+						<h6>(Lanchonete)</h6>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- HOME section end -->
+
+		<!-- QUEMSOMOS section start -->
+		<section id="quem" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h2>Nosso Restaurante</h2>
+					</div>
+					<div class="col-12 text-justify p-title">
+						<div class="row" id="selfservice">
+							<div class="col-xl-4 col-lg-4 col-md-4 col-12 float-left leftSelf">
+								<img class="img-fluid rounded mx-auto my-auto" src="res/site/assets/images/selfservice/selfservice_1.jpg" title="Self-Service" alt="Self-Service" />
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-4 col-12 float-left centerSelf">
+								<img class="img-fluid rounded mx-auto my-auto" src="res/site/assets/images/selfservice/selfservice_0.jpg" title="Self-Service" alt="Self-Service" />
+								<img class="img-fluid rounded mx-auto my-auto" src="res/site/assets/images/selfservice/selfservice_3.jpg" title="Self-Service" alt="Self-Service" />
+							</div>
+							<div class="col-xl-4 col-lg-4 col-md-4 col-12 float-left rightSelf">
+								<img class="img-fluid rounded mx-auto my-auto" src="res/site/assets/images/selfservice/selfservice_2.jpg" title="Self-Service" alt="Self-Service" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- QUEMSOMOS section end -->
+		
+		<!-- DESTAQUES section start -->
+		<section id="destaques" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Destaques da Lanchonete</h3>
+					</div>
+					<div class="col-12 p-title">
+						<div class="row">
+							{$i=1}
+							{loop="$highlights"}
+								{if="$i < 3"}
+									<div id="{$i}" class="col-xl-6 col-lg-6 col-12 featured">
+										<div class="row">
+											<div class="col-6 mx-auto my-auto">
+												<img src="res/site/assets/images/featured/{$value.desimage}" class="img-fluid rounded" title="{$value.desname}" alt="{$value.desname}" >
+											</div>
+											<div class="col-6 mx-auto my-auto nameL">
+												<h5 class="text-left">{$value.desname}</h5>
+												<p class="text-left">{$value.destext}</p>
+											</div>
+										</div>
+									</div>
+								{else}
+									<div id="{$i}" class="col-xl-6 col-lg-6 col-12 featured">
+										<div class="row">
+											<div class="col-6 mx-auto my-auto nameR">
+												<h5 class="text-right">{$value.desname}</h5>
+												<p class="text-right">{$value.destext}</p>
+											</div>
+											<div class="col-6 mx-auto my-auto">
+												<img src="res/site/assets/images/featured/{$value.desimage}" class="img-fluid rounded" title="{$value.desname}" alt="{$value.desname}" >
+											</div>
+										</div>
+									</div>
+								{/if}
+								{$i=$i+1}
+							{/loop}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- DESTAQUES section end -->
+
+		<!-- CONHECER section start -->
+		<section id="conhecer" class="section" > 
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Venha conhecer!</h3>
+					</div>
+					<div class="col-12 p-title">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1828.8600369188148!2d-46.65215807222503!3d-23.54256847258239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xce50f49eea22244d!2sResturante+Estev%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1507558214782" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- CONHECER section end -->
+
+		<!-- CONTATO section start -->
+		<section id="contato" class="section" > 
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Acompanhe-nos no Facebook!</h3>
+					</div>
+					
+					<div class="col-12 p-title d-none d-sm-block ">
+						<div class="row text-center">
+							<div class="col-xl-3 col-lg-3 "></div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-12 ">
+								<h3 class="invisible"></h3>
+								<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLanches-Estev%25C3%25A3o-172050532850594%2F&tabs=timeline&width=500&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=323623711381200" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+							</div>
+							<div class="col-xl-3 col-lg-3 "></div>
+						</div>
+					</div>
+					<div class="col-12 p-title d-block d-sm-none ">
+						<div class="row text-center">
+							<div class="col-xl-3 col-lg-3 "></div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-12 ">
+								<h3 class="invisible"></h3>
+								<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLanches-Estev%25C3%25A3o-172050532850594%2F&tabs&width=290&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=323623711381200" width="290" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+							</div>
+							<div class="col-xl-3 col-lg-3 "></div>
+						</div>
+					</div>
+					<div class="col-12 pt-5">
+						<div class="row">
+							<div class="col-xl-2 col-lg-2 "></div>
+							<div class="col-xl-4 col-lg-4 col-md-5 d-none d-sm-block text-left">
+								<h5>Endereço</h5>
+								<p>Rua Dona Veridiana, 384 - Higienópolis, São Paulo - SP, 01238-010</p>
+								<h5>E-mail</h5>
+								<p>restaurante.estevao@gmail.com</p>
+								<h5>Telefone</h5>
+								<p>(11) 3338-1305</p>
+							</div>
+							<div class="col-12 d-block d-sm-none text-center">
+								<h5>Endereço</h5>
+								<p>Rua Dona Veridiana, 384 - Higienópolis, São Paulo - SP, 01238-010</p>
+								<h5>E-mail</h5>
+								<p>restaurante.estevao@gmail.com</p>
+								<h5>Telefone</h5>
+								<p>(11) 3338-1305</p>
+								<br>
+							</div>
+							<!-- <div class="col-xl-2 col-lg-2 col-md-2 "></div> -->
+							<div class="col-xl-4 col-lg-4 col-md-5 col-12 ">
+								{if="$error != ''"}
+									<div class="alert alert-warning alert-block text-center" role="alert">
+										{$error}
+									</div>
+								{/if}
+								{if="$success != ''"}
+									<div class="alert alert-success alert-block text-center" role="alert">
+										{$success}
+									</div>
+								{/if}
+								<form class="form-horizontal" action="/sendEmail" method="post" >
+									<fieldset>
+										<h5 class="text-center" >Entre em contato</h5>
+										<div class="form-group">
+											<input type="text" class="form-control" id="inputname" name="name" placeholder="Seu nome" 
+												{if="$error != ''"} autofocus {/if} {if="$success != ''"} autofocus {/if} >
+										</div>
+										<div class="form-group">
+											<input type="email" class="form-control" id="inputemail" name="email" placeholder="Seu e-mail"  >
+											
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="inputsubject" name="subject" placeholder="Assunto"  >
+											
+										</div>
+										<div class="form-group">
+											<textarea class="form-control" rows="3" id="inputtextarea" name="message" placeholder="Mensagem que deseja nos enviar."  ></textarea>
+										</div>
+										<div class="form-group ">
+											<div class="row">
+												<div class="col-6">
+													<button type="reset" class="btn btn-light btn-block" >Limpar</button>
+												</div>
+												<div class="col-6">
+													<button type="submit" class="btn btn-primary btn-block" name="btnEnviar" >Enviar</button>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="col-xl-2 col-lg-2 "></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- CONTATO section end -->

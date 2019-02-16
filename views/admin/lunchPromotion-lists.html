@@ -1,0 +1,43 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 text-center pt-3">
+						<h1>Lista de sorteios</h1>
+						<br>
+						<div id="" class="row mb-5">
+							<div class="col-lg-6 offset-lg-3 col-12 mb-4">
+								<table id="tbClients" class="table table-responsive table-striped">
+									<thead>
+										<tr>
+											<th class="tb-icon" >#</th>
+											<th class="tb-date" >Data</th>
+											<th class="tb-link" ></th>
+										</tr>
+									</thead>
+									<tbody id="customScrollbar">
+										{if="$lots === NULL"}
+											<tr>
+												<td colspan="4">Nenhum cliente cadastro-se neste dia</td>
+											</tr>
+										{else}
+											{$i=1}
+											{loop="$lots"}
+												<tr>
+													<td class="tb-icon" >{$i}</td>
+													<td class="tb-date" >{function="formatDate($value.dtregister)"}</td>
+													<td class="tb-link" >
+														<a href="/admin/lunch/list/{$value.idlottery}" class="btn btn-link btn-sm" alt="Ver sorteados" ><i class="fas fa-search"></i></a>
+													</td>
+												</tr>
+												{$i=$i+1}
+											{/loop}
+										{/if}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

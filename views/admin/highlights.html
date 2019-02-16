@@ -1,0 +1,75 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 pt-3">
+						<div class="row">
+							<div class="col-12">
+								<a href="/admin/highlights/create" class="btn btn-success float-left">Cadastrar destaque</a>
+								<form action="/admin/highlights" class="float-right">
+									<div class="input-group input-group-md" style="width: 150px;">
+										<input type="text" name="search" class="form-control pull-right" placeholder="Procurar" value="{$search}">
+										<div class="input-group-btn">
+											<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-12">
+								<table id="tbUsers" class="table table-responsive table-striped">
+									<thead>
+										<tr>
+											<th class="tb-icon" >#</th>
+											<th class="tb-title" >Título</th>
+											<th class="tb-text" >Descrição</th>
+											<th class="tb-img" >Imagem</th>
+											<th class="tb-icon" >Ativo</th>
+											<th class="tb-icon" > </th>
+											<th class="tb-icon" > </th>
+										</tr>
+									</thead>
+									<tbody>
+										{loop="$featured"}
+											<tr>
+												<td class="tb-icon" >{$value.idhighlights}</td>
+												<td class="tb-title" >{$value.desname}</td>
+												<td class="tb-text" >{$value.destext}</td>
+												<td class="tb-img" >{$value.desimage}</td>
+												<td class="tb-icon" >
+													{if="$value.active == 1"}
+														<a href="/admin/highlights/{$value.idhighlights}/active" class="btn btn-link btn-sm text-dark " alt="Status" onclick="return confirm('Deseja realmente desativar esse destaque?')" title="Status {if="$value.active == 1"}ON{else}OFF{/if}" >
+															<i class="fas fa-check-square" ></i>
+														</a>
+													{else}
+														<a href="/admin/highlights/{$value.idhighlights}/active" class="btn btn-link btn-sm text-dark " alt="Status" onclick="return confirm('Deseja realmente ativar esse destaque?')" title="Status {if="$value.active == 1"}ON{else}OFF{/if}" >
+															<i class="far fa-square" ></i>
+														</a>
+													{/if}
+												</td>
+												<td class="tb-icon" >
+													<a href="/admin/highlights/{$value.idhighlights}" class="btn btn-link btn-sm " title="Editar registro" alt="Editar" ><i class="far fa-edit"></i></a>
+												</td>
+												<td class="tb-icon" >
+													<a href="/admin/highlights/{$value.idhighlights}/delete" class="btn btn-link btn-sm text-danger " title="Excluir" alt="Excluir" onclick="return confirm('Deseja realmente excluir este registro?')" ><i class="far fa-trash-alt"></i></a>
+												</td>
+											</tr>
+										{/loop}
+									</tbody>
+								</table>
+							</div>
+							<div class="col-12">
+								<nav class="pageNaveg" >
+									<ul class="pagination justify-content-center">
+										{loop="$pages"}
+											{if="$value.text > 0"}
+											<li class="page-item"><a class="page-link" href="{$value.href}">{$value.text}</a></li>
+											{/if}
+										{/loop}
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

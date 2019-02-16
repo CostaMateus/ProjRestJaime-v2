@@ -1,0 +1,53 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 text-center pt-3">
+						<h1>Promoção Restaurante!</h1>
+						<br>
+						<div id="" class="row mb-5">
+							<div class="col-lg-4 offset-lg-4 col-12">
+								{if="$error != ''"}
+									<div class="alert alert-info alert-block" style="margin:10px">
+										{$error}
+									</div>
+									<a class="btn btn-info btn-md " href="/admin/lunch/list/{$cl}" >Conferir sorteados</a>
+								{else}
+									<a class="btn btn-info btn-lg" href="/admin/lunch/lottery" >Sortear</a>
+								{/if}
+							</div>
+							<div class="col-lg-6 offset-lg-3 col-12 mb-4 d-none">
+								<table id="tbClients" class="table table-responsive table-striped">
+									<thead>
+										<tr>
+											<th class="tb-icon" >#</th>
+											<th class="tb-name" >Nome</th>
+											<th class="tb-phone" >Celular</th>
+											<th class="tb-mail" >E-mail</th>
+										</tr>
+									</thead>
+									<tbody id="customScrollbar">
+										{if="$winners === NULL"}
+											<tr>
+												<td colspan="4">Sorteio ainda não realizado</td>
+												<td colspan="4">ou</td>
+												<td colspan="4">Nenhum cliente sem cadastro neste dia</td>
+											</tr>
+										{else}
+											{loop="$winners"}
+												<tr>
+													<td class="tb-icon" >{$value.idclient}</td>
+													<td class="tb-name" >{$value.desname}</td>
+													<td class="tb-login" >{$value.desemail}</td>
+													<td class="tb-mail" >{$value.desemail}</td>
+												</tr>
+											{/loop}
+										{/if}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

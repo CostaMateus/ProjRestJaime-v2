@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+		<title>Redefinição de Senha</title>
+		<style type="text/css" >
+			*, *::before, *::after { box-sizing: border-box; }
+			* { font-family: Verdana, Helvetica, Arial, sans-serif; }
+			body { margin: 0; padding: 0; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; text-align: left; background-color: rgba(244,123,37,.1); }
+			h3, h5 { line-height: 1.1; }
+			h3 { font-weight:500; font-size: 30px; margin: 0 0 15px 0; }
+			h5 { font-weight:900; font-size: 25px; margin: 0; }
+			.table { margin: 15px auto; padding: 15px; width: 100%; max-width: 550px; background-color: #FFF; }
+			.table td { padding: 0.75rem 0; vertical-align: top; }
+			.table td.font a { text-decoration: none; color: #212529; }
+			.table td.font a:hover { text-decoration: underline; color: #F47B25; }
+			.table .foo { padding-top: 30px; }
+			.table .font { font-size: 12px; padding-bottom: 0; }
+			.table .td-sup { padding-bottom: 0; }
+			.table .td-img { padding-top: 0; }
+			.text-center { text-align: center !important; }
+			.img-fluid { max-width: 100%; height: auto; }
+		</style>
+	</head>
+	<body>
+		<table class="table">
+			<tbody>
+				<tr>
+					<td class="text-center " >
+						<h3>Bug reportado!</h3>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Reportado por: {$nameAdmin}
+						<br> 
+						Bug: {$bugTitle}
+						<br>
+						E-mail: {$emailAdmin}
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Descrição do bug: 
+						<br>
+						{$messageClient}
+					</td>
+				</tr>
+				<tr>
+					<td class="td-sup" >
+						<br><br>
+						Suporte Estevão.
+					</td>
+				</tr>
+				<tr>
+					<td class="td-img" >
+						<img class="img-fluid float-left" src="https://costamateus.com.br/views/email/Logo.svg" width="136" title="Estevão Restaurante e Lanchonete" alt="Estevão Restaurante e Lanchonete">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

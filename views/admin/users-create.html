@@ -1,0 +1,48 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 pt-3">
+						<div class="row">
+							<div class="col-12 text-center">
+								<h4>Novo usuário</h1>
+							</div>
+
+							<div class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-10 offset-1">
+								<form id="createForm" action="/admin/users/create" method="post">
+									<div class="form-group">
+										<label for="desname">Nome</label>
+										<input type="text" class="form-control" id="desname" name="desname" placeholder="Digite o nome" autofocus >
+									</div>
+									<div class="form-group">
+										<label for="deslogin">Login</label>
+										<input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Digite o login" >
+									</div>
+									<div class="form-group">
+										<label for="desemail">E-mail</label>
+										<input type="email" class="form-control" id="desemail" name="desemail" placeholder="Digite o e-mail" >
+									</div>
+									<div class="form-group">
+										<label for="despassword">Senha</label>
+										<input type="password" class="form-control" id="despassword" name="despassword" placeholder="Digite a senha" >
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" name="inadmin" value="1"> Acesso de Administrador
+										</label>
+									</div>
+									<div class="row">
+										<div class="col-6">
+											<button type="reset" class="btn btn-default btn-block">Limpar</button>
+										</div>
+										<div class="col-6">
+											<button type="submit" class="btn btn-info btn-block">Cadastrar</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

@@ -1,0 +1,136 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 pt-3">
+						<h1 class="text-center">Detalhes da conta</h1>
+						<div class="row">
+							<div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-10 offset-1">
+								{if="$error != ''"}
+									<div class="alert alert-warning alert-block text-center" role="alert">
+										{$error}
+									</div>
+								{elseif="$success != ''"}
+									<div class="alert alert-success alert-block text-center" role="alert">
+										{$success}
+									</div>
+								{/if}
+							</div>
+							<div id="image_change" class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-10 offset-1">
+								<div class="card ">
+									<div class="card-header text-center"><b>IMAGEM</b></div>
+									<div class="card-body">
+										<h6 class="card-subtitle mb-2 text-muted text-center">Clique na foto para escolher uma nova.</h6>
+										<form action="/admin/account" method="post" enctype="multipart/form-data">
+											<div class="form-group">
+												<div class="row">
+													<label for="file" class="col-sm-4 text-center">
+														<img class="img-fluid bg-dark rounded-circle mx-auto" id="image-preview" src="/res/admin/profile/images/{$user.desimage}" alt="{$user.desname}">
+													</label>
+													<div class="col-sm-8 my-auto input-group">
+														<div class="custom-file">
+															<label class="custom-file-label" for="file">Procurar</label>
+															<input type="file" class="custom-file-input" id="file" name="desimage" value="{$user.desimage}" >
+														</div>
+														<div class="input-group-append">
+															<button type="submit" class="btn btn-info ">Salvar</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div id="user_change" class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-10 offset-1">
+								<div class="card ">
+									<div class="card-header text-center"><b>DADOS GERAIS</b></div>
+									<div class="card-body">
+										<form action="/admin/account" method="post" >
+											<div class="form-group">
+												<label for="desname">Nome</label>
+												<input type="text" class="form-control" id="desname" name="desname" placeholder="Digite o nome" value="{$user.desname}" >
+											</div>
+											<div class="form-group">
+												<label for="deslogin">Login</label>
+												<input type="text" class="form-control" id="deslogin" name="deslogin" placeholder="Digite o login" value="{$user.deslogin}" >
+											</div>
+											<div class="form-group">
+												<label for="desemail">E-mail</label>
+												<input type="email" class="form-control" id="desemail" name="desemail" placeholder="Digite o e-mail" value="{$user.desemail}" >
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" name="inadmin" value="1" {if="$user.inadmin == 1"}checked{/if} > Acesso de Administrador
+												</label>
+											</div>
+											<div class="float-right">
+												<button type="submit" class="btn btn-info ">Salvar</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div id="password_change" class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-10 offset-1">
+								<div class="card " >
+									<div class="card-header text-center"><b>MUDANÇA DE SENHA</b></div>
+									<div class="card-body">
+										<h6 class="card-subtitle mb-2 text-muted text-center">Insira uma senha apenas se você quiser alterá-la.</h6>
+										<form action="/admin/account" method="post" >
+											<div class="form-group">
+												<label class="control-label">Nova senha:</label>
+												<div class="control-group password optional user_password">
+													<div class="controls">
+														<input type="password" class="form-control" id="despassword1" name="despassword1" placeholder="Digite a nova senha" >
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label">Confirmação de senha:</label>
+												<div class="control-group password optional user_password_confirmation">
+													<div class="controls">
+														<input type="password" class="form-control" id="despassword2" name="despassword1-confirm" placeholder="Confirme a nova senha" >
+													</div>
+												</div>
+											</div>
+											<div class="float-right">
+												<button type="submit" class="btn btn-info ">Salvar</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+							<div id="delete_acc" class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-10 offset-1">
+								<div class="card border border-danger" >
+									<div class="card-header text-center bg-danger text-light"><b>APAGAR CONTA</b></div>
+									<div class="card-body">
+										<h6 class="card-subtitle mb-2 text-muted text-center">Deseja realmente apagar a conta?</h6>
+										<form action="/admin/account" method="post" >
+											<div class="form-group">
+												<div class="control-group password optional user_password">
+													<div class="controls">
+														<input type="password" class="form-control is-invalid" id="despassword" name="despassword" placeholder="Digite a senha para confirmar" >
+													</div>
+												</div>
+											</div>
+											<div class="float-right">
+												<button type="submit" class="btn btn-danger ">Apagar</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<script>
+			document.querySelector('#file').addEventListener('change', function(){
+				var file = new FileReader();
+				file.onload = function() {
+					document.querySelector('#image-preview').src = file.result;
+				}
+				file.readAsDataURL(this.files[0]);
+			});
+		</script>
+		<!-- CONTENT section end -->

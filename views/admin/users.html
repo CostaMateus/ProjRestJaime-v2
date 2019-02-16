@@ -1,0 +1,96 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 pt-3">
+						<div class="row">
+							<div class="col-12">
+								<a href="/admin/users/create" class="btn btn-success float-left">Cadastrar Usuário</a>
+
+								<form action="/admin/users" class="float-right">
+									<div class="input-group input-group-md" style="width: 150px;">
+										<input type="text" name="search" class="form-control pull-right" placeholder="Procurar" value="{$search}">
+										<div class="input-group-btn">
+											<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+										</div>
+									</div>
+								</form>
+							</div>
+
+							<div class="col-12">
+								<table id="tbUsers" class="table table-responsive table-striped">
+									<thead>
+										<tr>
+											<th class="tb-icon" >#</th>
+											<th class="tb-name" >Nome</th>
+											<th class="tb-login" >Login</th>
+											<th class="tb-mail" >E-mail</th>
+											<th class="tb-icon" >Admin</th>
+											<th class="tb-icon" > </th>
+											<th class="tb-icon" > </th>
+											<th class="tb-icon" > </th>
+										</tr>
+									</thead>
+									<tbody>
+										{$i=1}
+										{loop="$users"}
+											<tr>
+												<td class="tb-icon" >{$i}</td>
+												<td class="tb-name" >{$value.desname}</td>
+												<td class="tb-login" >{$value.deslogin}</td>
+												<td class="tb-mail" >{$value.desemail}</td>
+												{if="$idUserLog == $value.iduser"}
+													<td class="tb-icon" >
+														<a href="/admin/account" class="btn btn-link btn-sm text-dark " alt="Status" title="Status {if="$value.inadmin == 1"}ON{else}OFF{/if}" >
+															{if="$value.inadmin == 1"}
+																<i class="fas fa-toggle-on" ></i>
+															{else}
+																<i class="fas fa-toggle-off" ></i>
+															{/if}
+														</a>
+													</td>
+													<td class="tb-icon" >
+														<a href="/admin/account" class="btn btn-link btn-sm " title="Editar registro" alt="Editar" ><i class="far fa-edit"></i></a>
+													</td>
+													<td class="tb-icon" >
+														<a href="/admin/account" class="btn btn-link btn-sm text-danger " title="Excluir registro" alt="Excluir" ><i class="far fa-trash-alt"></i></a>
+													</td>
+													<td class="tb-icon" >
+														<a href="/admin/account" class="btn btn-link btn-sm text-info " title="Alterar a senha" alt="Alterar a senha" ><i class="fa fa-unlock-alt"></i></a>
+													</td>
+												{else}
+													<td class="tb-icon" >
+														<a href="/admin/users/{$value.iduser}/inadmin" class="btn btn-link btn-sm text-dark " alt="Status" onclick="return confirm('Deseja realmente mudar o status?')" title="Status {if="$value.inadmin == 1"}ON{else}OFF{/if}" >
+															{if="$value.inadmin == 1"}<i class="fas fa-toggle-on" ></i>{else}<i class="fas fa-toggle-off" ></i>{/if}
+														</a>
+													</td>
+													<td class="tb-icon" >
+														<a href="/admin/users/{$value.iduser}" class="btn btn-link btn-sm " title="Editar registro" alt="Editar" ><i class="far fa-edit"></i></a>
+													</td>
+													<td class="tb-icon" >
+														<a href="/admin/users/{$value.iduser}/delete" class="btn btn-link btn-sm text-danger " title="Excluir registro" alt="Excluir" onclick="return confirm('Deseja realmente excluir este registro?')" ><i class="far fa-trash-alt"></i></a>
+													</td>
+													<td class="tb-icon" ></td>
+												{/if}
+											</tr>
+											{$i=$i+1}
+										{/loop}
+									</tbody>
+								</table>
+							</div>
+							<div class="col-12">
+								<nav class="pageNaveg" >
+									<ul class="pagination justify-content-center">
+									{loop="$pages"}
+										{if="$value.text != 1"}
+										<li class="page-item"><a class="page-link" href="{$value.href}">{$value.text}</a></li>
+										{/if}
+									{/loop}
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

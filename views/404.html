@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0">
+		<meta content="Apenas um teste!!!." name="description"> <!-- mudar -->
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+		<!-- Font Awesome Free CDN -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+
+		<!-- Favicon site -->
+		<link rel="shortcut icon" href="/res/site/assets/images/logo/favicon-main.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="https://costamateus.com.br/res/site/assets/images/logo/favicon-main.ico" type="image/x-icon" />
+		<!-- <link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico" type="image/x-icon"> -->
+
+		<meta name="author" content="Restaurante e Lanchonete Estavão">
+		<meta property="og:locale" content="pt_BR" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Restaurante e Lanchonete Estavão" />
+		<meta property="og:description" content="Melhor Restaurante e Lanchonete da região da Santa Casa " />
+		<meta property="og:url" content="https://costamateus.com.br/" /> <!-- mudar -->
+		<meta property="og:site_name" content="Restaurante e Lanchonete Estavão" />
+		<meta property="og:image" content="https://costamateus.com.br/res/site/assets/images/logo/LogoMini.png" /> <!-- mudar / add imagem -->
+
+		<title>Restaurante e Lanchonete Estavão</title>
+
+		<!-- Personal CSS -->
+		<style type="text/css" media="screen">
+			body { position: relative; }
+			body::-webkit-scrollbar { width: 10px; }
+			body::-webkit-scrollbar-track { background: #EEE; }
+			body::-webkit-scrollbar-thumb { background: #F9BD92; } 
+			body::-webkit-scrollbar-thumb:hover { background: #F47B25; } 
+
+			#navmain { background-color: #F47B25 !important; } /* #692603 marrom */
+			
+			.navbar { padding: 0 1em !important; }
+			.nav-item.active .nav-link{ background-color: #FFF !important; color: rgba(0,0,0,.6) !important; }
+			.nav-link { color: #FFF !important; padding: 13px 1em !important; }
+			.nav-link:hover { background-color: #FFF !important; color: rgba(0,0,0,.6) !important; text-decoration: underline; 
+				transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; -webkit-transition: all .2s ease-in-out; }
+			
+			#notFound h1 {
+				padding-top: 100px;
+			}
+
+			#footer { background-color: #F47B25 !important; color: rgba(255,255,255,.9); }
+			#footer h6 { padding: .75em 0; margin: 0 !important;}
+			#footer p { padding-bottom: .25em; margin: 0 !important;}
+			#footer a { color: rgba(255,255,255,.9); }
+			#footer a:hover { color: rgba(0,0,0,.6); }
+		</style>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script type="text/javascript" charset="utf-8" async defer>
+			$(function() {
+				$('a[href*="#"]:not([href="#"])').click(function(e) {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+						// console.log(target);
+
+						if (target.length) {
+							$('html, body').animate({scrollTop: target.offset().top - 49}, 1000);
+							return false;
+						}
+					}
+				});
+			});
+
+			window.onscroll = function(){
+				var scrollPos = $(document).scrollTop();
+				$('#navmain li a').each(function () 
+				{
+					var currLink = $(this);
+					var parCurrLink = currLink.parent();
+					var refElement = $(currLink.attr("href"));
+
+					if ((refElement.position().top <= (scrollPos + 50)) && ((refElement.position().top + refElement.height()) > (scrollPos + 20))) 
+					{
+						parCurrLink.removeClass("active");
+						currLink.parent().addClass("active");
+					} 
+					else 
+					{
+						currLink.parent().removeClass("active");
+					}
+				});
+			};
+
+			function showPromo() {
+				$('#lanchePromoModal').modal('show'); 
+			}
+		</script>
+	</head>
+
+	<body data-spy="scroll" data-target="#navmain" data-offset="100" {if="$show != ''"}onload="showPromo()" {/if} >
+		<!-- MENU section start -->
+		<nav id="navmain" class="navbar navbar-expand-xl navbar-expand-lg navbar-dark fixed-top bg-dark ">
+			<div class="container">
+				<a class="navbar-brand" href="/">
+					<img class="my-auto mx-auto" src="/res/site/assets/images/logo/LogoBranco.svg" width="" height="35" alt="Restaurante e Lanchonete Estavão" >
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div id="navbarMain" class="collapse navbar-collapse" ">
+					<ul class="nav navbar-nav ml-auto mr-0">
+						<!-- home -->
+						<li class="nav-item active"><a class="nav-link " href="#home">Home</a></li>
+
+						<!-- quem somos -->
+						<li class="nav-item"><a class="nav-link " href="#quem" >Restaurante</a></li>
+						
+						<!-- destaques -->
+						<li class="nav-item"><a class="nav-link " href="#destaques" >Destaques</a></li>
+						
+						<!-- conhecer -->
+						<li class="nav-item"><a class="nav-link " href="#conhecer" >Venha conhecer</a></li>
+						
+						<!-- contato -->
+						<li class="nav-item"><a class="nav-link " href="#contato" >Contato</a></li>
+						
+						<!-- cardapio -->
+						<li class="nav-item"><a class="nav-link " href="/res/site/card/cardapio.pdf" target="_blank" >Cardápio</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- MENU section end -->
+
+		<!-- HOME section start -->
+		<section id="notFound" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h1>Página não encontrada</h1>
+						<br>
+						<p>Voltar para página principal, clique <a href="/">aqui</a>.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- HOME section end -->
+
+		<!-- FOOTER section start -->
+		<footer id="footer" class="section fixed-bottom" >
+			<div class="container ">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h6>&copy; 2018 Restaurante e Lanchonete Estavão</h6>
+						<p>Desenvolvido por: <a style="text-decoration:none;" href="https://costamateus.com.br/index.html" target="_blank" ><u>Mateus Lopes Costa</u></a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- FOOTER section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script src="/res/site/assets/js/jquery.SimpleMask.js" ></script>
+	</body>
+</html>

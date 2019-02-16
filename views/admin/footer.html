@@ -1,0 +1,49 @@
+
+
+		<!-- LOADING modal start -->
+		<section>
+			<div class="modal" id="loadModal" tabindex="-1" role="dialog" aria-labelledby="loadModal" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body text-center">
+							<img class="mx-auto" src="/res/site/assets/images/load/2.svg" width="40%" height="" alt="" >
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- LOADING modal end -->
+
+		<!-- FOOTER section start -->
+		<section id="footer" class="section fixed-bottom d-print-none">
+			<div class="container-fluid text-center">
+				<div class="row">
+					<div class="col-12">
+						<h6>&copy; 2018 Estevão Restaurante e Lanchonete</h6>
+						<p>	Desenvolvido por: <a href="https://www.linkedin.com/in/costamateus6/" target="_blank">Mateus Lopes Costa</a></p>
+					</div>
+					<div id="bugReport" class="d-xl-block d-lg-block d-md-block d-none" title="Relatar um bug">
+						<a class="" href="/admin/bug" ><i class="fas fa-bug my-auto"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+		<script type="text/javascript" charset="utf-8" >
+			$("#menu-main-md").on("click", function () {
+				$("#esqSub").slideToggle("slow");
+			});
+
+			$("#menu-user").on("click", function () {
+				$("#logout").slideToggle();
+			});
+
+		</script>
+	</body>
+</html>

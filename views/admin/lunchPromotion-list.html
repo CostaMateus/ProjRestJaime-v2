@@ -1,0 +1,58 @@
+
+					<!-- MAIN div start -->
+					<div id="dir" class="col-xl-10 col-lg-10 col-12 offset-xl-2 offset-lg-2 text-center pt-3">
+						{if="$date.dtregister == 0"}
+							<h1>Sorteio não encontrado no banco!</h1>
+							<br>
+						{else}
+							<h1>Vencidores de {function="formatDate($date.dtregister)"}</h1>
+							<br>
+						{/if}
+						<div id="" class="row mb-5">
+							<div class="col-lg-6 offset-lg-3 col-12 ">
+								<a href="/admin/lunch/list" class="btn btn-dark float-right">Voltar</a>
+								<!-- <a href="/admin/lunch/list/{$idlot}/sendEmail" class="btn btn-info float-left {if="$winners === NULL"}disabled{/if}">Enviar SMS/e-mail</a>  -->
+
+								<form class="form-group mb-0" action="/admin/lunch/list/{$idlot}/sendEmail" method="post">
+									<input type="hidden" class="form-control" value="{$w}" name="desWinners" >
+									<button type="submit" class="btn btn-info float-left {if="$winners === NULL"}disabled{/if}">Enviar SMS/e-mail</button>
+								</form>
+
+							</div>
+							<div class="col-lg-6 offset-lg-3 col-12 mb-4">
+								<table id="tbClients" class="table table-responsive table-striped customScrollbar">
+									<thead>
+										<tr>
+											<th class="tb-icon" >#</th>
+											<th class="tb-name" >Nome</th>
+											<th class="tb-phone" >Celular</th>
+											<th class="tb-mail" >E-mail</th>
+										</tr>
+									</thead>
+									<tbody>
+										{if="$winners === NULL"}
+											<tr>
+												<td colspan="4">Nenhum cliente registrado no banco!</td>
+											</tr>
+										{else}
+											{$i=1}
+											{loop="$winners"}
+												<tr>
+													<td class="tb-icon" >{$i}</td>
+													<td class="tb-name" >{$value.desname}</td>
+													<td class="tb-login" ></td>
+													<td class="tb-mail" >{$value.desemail}</td>
+												</tr>
+												{$i=$i+1}
+											{/loop}
+										{/if}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- MAIN div end -->
+				</div>
+			</div>
+		</section>
+		<!-- CONTENT section end -->

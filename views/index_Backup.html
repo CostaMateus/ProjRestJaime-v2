@@ -1,0 +1,178 @@
+
+		<!-- HOME section start -->
+		<section id="home" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<img id="logo1" src="res/site/assets/images/logo/Logo.svg" title="Estevão Restaurante e Lanchonete" alt="Estevão Restaurante e Lanchonete" />
+						<h4>Segunda a sexta: 06h às 23h</h4>
+						<h4>Sábado: 10h às 18h</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- HOME section end -->
+
+		<!-- QUEMSOMOS section start -->
+		<section id="quem" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h2>Breve historia do estabelecimento</h2>
+					</div>
+					<div class="col-12 text-justify p-title">
+						<p>
+							<div class="col-xl-4 col-lg-4 col-md-6 col-12 float-left">
+								<img class="img-fluid rounded mx-auto my-auto" src="#" title="Self-Service" alt="Self-Service" />
+							</div>
+							<--- Foto da entrada 
+							<br> 
+							Mussum Ipsum, cacilds vidis litro abertis. Manduma pindureta quium dia nois paga. Suco de cevadiss deixa as pessoas mais interessantiss. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Cevadis im ampola pa arma uma pindureta.
+							Copo furadis é disculpa de bebadis, arcu quam euismod magna. Per aumento de cachacis, eu reclamis. Viva Forevis aptent taciti sociosqu ad litora torquent Delegadis gente finis, bibendum egestas augue arcu ut est.
+							<br>
+							Detraxit consequat et quo num tendi nada. Atirei o pau no gatis, per gatis num morreus. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+							Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. in elementis mé pra quem é amistosis quis leo. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. in elementis mé pra quem é amistosis quis leo. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- QUEMSOMOS section end -->
+		
+		<!-- DESTAQUES section start -->
+		<section id="destaques" class="section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Destaques</h3>
+					</div>
+					<div class="col-12 p-title">
+						<div class="row">
+							{$i=1}
+							{loop="$highlights"}
+								{if="$i < 3"}
+									<div id="{$i}" class="col-xl-6 col-lg-6 col-12 featured">
+										<div class="row">
+											<div class="col-6 mx-auto my-auto">
+												<img src="res/site/assets/images/featured/{$value.desimage}" class="img-fluid rounded" title="{$value.desname}" alt="{$value.desname}" >
+											</div>
+											<div class="col-6 mx-auto my-auto nameL">
+												<h5 class="text-left">{$value.desname}</h5>
+												<p class="text-left">{$value.destext}</p>
+											</div>
+										</div>
+									</div>
+								{else}
+									<div id="{$i}" class="col-xl-6 col-lg-6 col-12 featured">
+										<div class="row">
+											<div class="col-6 mx-auto my-auto nameR">
+												<h5 class="text-right">{$value.desname}</h5>
+												<p class="text-right">{$value.destext}</p>
+											</div>
+											<div class="col-6 mx-auto my-auto">
+												<img src="res/site/assets/images/featured/{$value.desimage}" class="img-fluid rounded" title="{$value.desname}" alt="{$value.desname}" >
+											</div>
+										</div>
+									</div>
+								{/if}
+								{$i=$i+1}
+							{/loop}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- DESTAQUES section end -->
+
+		<!-- SOCIAL section start -->
+		<section id="social" class="section" > 
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Acompanhe-nos no Facebook!</h3>
+						<!-- <h3>Acompanhe-nos nas redes sociais!</h3> -->
+					</div>
+					
+					<div class="col-12 p-title">
+						<div class="row text-center">
+							<div class="col-xl-3 col-lg-3 "></div>
+							<div class="col-xl-6 col-lg-6 col-md-12 col-12 ">
+								<h3 class="invisible"></h3>
+								<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLanches-Estev%25C3%25A3o-172050532850594%2F&tabs&width=370&height=154&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=323623711381200" width="370" height="154" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+							</div>
+							<div class="col-xl-3 col-lg-3 "></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- SOCIAL section end -->
+
+		<!-- CONTATO section start -->
+		<section id="contato" class="section" > 
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3>Contato</h3>
+					</div>
+					
+					<div class="col-12 p-title">
+						<div class="row">
+							<div class="col-xl-1 col-lg-1 "></div>
+							<div class="col-xl-4 col-lg-4 col-md-5 col-12 text-left">
+								<h5>Endereço</h5>
+								<p>Rua Dona Veridiana, 384 - Higienópolis, São Paulo - SP, 01238-010</p>
+								<h5>E-mail</h5>
+								<p>restaurante.estevao@gmail.com</p>
+								<h5>Telefone</h5>
+								<p>(11) 3338-1305</p>
+							</div>
+							<div class="col-xl-2 col-lg-2 col-md-2 "></div>
+							<div class="col-xl-4 col-lg-4 col-md-5 col-12 ">
+								{if="$error != ''"}
+									<div class="alert alert-warning alert-block text-center" role="alert">
+										{$error}
+									</div>
+								{/if}
+								{if="$success != ''"}
+									<div class="alert alert-success alert-block text-center" role="alert">
+										{$success}
+									</div>
+								{/if}
+								<form class="form-horizontal" action="/sendEmail" method="post" >
+									<fieldset>
+										<div class="form-group">
+											<input type="text" class="form-control" id="inputname" name="name" placeholder="Seu nome" 
+												{if="$error != ''"} autofocus {/if} {if="$success != ''"} autofocus {/if} >
+										</div>
+										<div class="form-group">
+											<input type="email" class="form-control" id="inputemail" name="email" placeholder="Seu e-mail"  >
+											
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="inputsubject" name="subject" placeholder="Assunto"  >
+											
+										</div>
+										<div class="form-group">
+											<textarea class="form-control" rows="3" id="inputtextarea" name="message" placeholder="Mensagem que deseja nos enviar."  ></textarea>
+										</div>
+										<div class="form-group ">
+											<div class="row">
+												<div class="col-6">
+													<button type="reset" class="btn btn-light btn-block" >Limpar</button>
+												</div>
+												<div class="col-6">
+													<button type="submit" class="btn btn-primary btn-block" name="btnEnviar" >Enviar</button>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="col-xl-1 col-lg-1 "></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- CONTATO section end -->
