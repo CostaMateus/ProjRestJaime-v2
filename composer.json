@@ -1,0 +1,22 @@
+{
+    "authors": [
+        {
+            "name": "Mateus L Costa",
+            "email": "suporte@costamateus.com.br"
+        }
+    ],
+    "require": {
+    	"phpmailer/phpmailer":"5.2.22",
+    	"slim/slim":"2.0",
+        "rain/raintpl":"3.0.0",
+        "verot/class.upload.php": "dev-master",
+        // "dompdf/dompdf":"0.*",
+        "total-voice/php-client":"1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "rlanches\\": "vendor\\restEstevao\\php-classes\\src",
+            "UploadImg\\": "vendor\\verot\\class.upload.php\\src"
+        }
+    }
+}
